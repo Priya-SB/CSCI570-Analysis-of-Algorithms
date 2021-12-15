@@ -1,0 +1,43 @@
+OBSERVATIONS:
+
+1. When the problem size (sum of length of first and second input string) is below 200, the cpu time taken is almost the same for both the basic and efficient algorithms.
+
+2. When the problem size is above 200, the cpu time taken by efficient algorithm is always higher than the basic algorithm.
+
+3. When the problem size is below 20, the memory utilized is almost the same for both the basic and efficient algorithm.
+
+4. When the problem size is above 20, the memory utilized by efficient algorithm is always lower than the basic algorithm. For the basic algorithm, the memory increases exponentially, but for the efficient algorithm, the memory increase is negligible.
+
+5. In the MemoryPlot, as the increase for the efficient algorithm is negligible in comparison with the basic algorithm, the line plot is almost parallel to the x-axis (problem size). 
+
+6. The sequence alignment output for an input can be different for both the basic and efficient algorithms.
+
+
+
+
+INSIGHTS:
+
+1. For a small input, as the number of computations is small and the length of string to compute on is small, the difference in total time taken is negligible.
+
+2. For a larger input, as we are recursively computing the substrings, the time taken by efficient algorithm is always higher than the basic algorithm.
+
+3. For a small input, the cost matrix size is small and will be almost equal for both basic algorithm (m*n) and efficient algorithm (2*m).
+
+4, 5. For a larger input, as the cost matrix size for basic algorithm is (m*n), while in efficient algorithm we are storing only 2 columns of the cost matrix (2*m), the memory utilized in basic algorithm is always higher than the efficient algorithm.
+
+6. For 2 input strings, as we have a unique optimal cost and we can find multiple valid alignments of the same cost, the basic and efficient algorithm can find different sequence alignments for the same input.
+
+
+
+
+Following are the results we used to plot the CPUPlot and the MemoryPlot:
+
+Problem Size = [96, 16, 480, 832, 128, 64, 48, 448, 704, 192, 256, 384, 512, 768, 1024, 1040, 1024, 1280, 576, 768, 2304]
+
+Time for basic version = [0.0, 0.0, 0.09369015693664551, 0.40990543365478516, 0.007999181747436523, 0.004001617431640625, 0.0, 0.08018708229064941, 0.24418425559997559, 0.015999317169189453, 0.028006792068481445, 0.05607438087463379, 0.1359999179840088, 0.3926680088043213, 0.6775150299072266, 0.044313669204711914, 0.7057335376739502, 0.9556033611297607, 0.10936450958251953, 0.26650357246398926, 1.24251127243042]
+
+Time for efficient version = [0.0, 0.0, 0.17185664176940918, 0.5490512847900391, 0.0, 0.015681743621826172, 0.0, 0.12501215934753418, 0.38249707221984863, 0.015623092651367188, 0.04687070846557617, 0.09373879432678223, 0.20397186279296875, 0.438953161239624, 0.8481554985046387, 0.07819104194641113, 0.8610954284667969, 1.3652589321136475, 0.18393492698669434, 0.4381389617919922, 2.0984694957733154]
+
+Memory for basic version = [78.676, 1.592, 1906.303, 5977.151, 153.79, 37.699, 20.285, 1553.537, 4568.73, 311.227, 620.911, 1244.038, 2414.188, 4783.037, 9556.23, 641.454, 9555.795, 14239.045, 2177.154, 4784.82, 19001.058]
+
+Memory for efficient version = [12.842, 1.57, 35.276, 56.085, 7.461, 3.989, 2.261, 14.529, 35.381, 7.493, 14.405, 14.469, 28.293, 56.025, 56.181, 111.993, 56.181, 83.829, 14.593, 56.025, 221.913]
