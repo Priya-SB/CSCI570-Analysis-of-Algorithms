@@ -1,0 +1,5 @@
+_______________________________________G__________ _____________________________________________C____
+TCTTTTTTCTTTTTCTTTTCTTTCTTCTTCTCTCTTCTCGAGACGAGAGA CTCGAGACGAGAGAGACGAGATCTCTCTTCTCGAGACGAGAGAGACGAGA
+30240
+0.078
+112.0
